@@ -1,23 +1,74 @@
-@import './styles-var.scss';
+@import "./styles-var.scss";
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url(./assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+  font-family: "Roboto Mono";
+  src: url(./assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
 }
 
-
-
 * {
-    font-family: 'Roboto Mono';
+  font-family: "Roboto Mono";
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: #120B35;
-    color: whitesmoke;
+  background-color: #120b35;
+  color: whitesmoke;
 }
 
 a {
-    text-decoration: none;
-    cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $red;
+}
+
+.btn-primary {
+  padding: 15px 30px;
+  background-color: $turquoise;
+  color: #0b042d;
+  border: unset;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
     color: $red;
+  }
+
+  &:active {
+    font-weight: 700;
+    color: $red;
+  }
+
+  &:disabled {
+    background-color: $light-grey;
+    color: white;
+    font-weight: 700;
+  }
+}
+
+.btn-secondary {
+  padding: 14px 29px;
+  color: $red;
+  background-color: unset;
+  border: 1px solid $turquoise;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    color: $turquoise;
+  }
+
+  &:active {
+    font-weight: 700;
+    color: $red;
+    border: 1px solid $red;
+  }
+
+  &:disabled {
+    border: 1px solid #827b7b;
+    color: #827b7b;
+    font-weight: 500;
+  }
 }

@@ -1,0 +1,49 @@
+@import "./../../../styles-var.scss";
+
+header {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+
+  .title {
+    flex: 1;
+    color: $turquoise;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: 54px;
+  }
+
+  h2 {
+    font-weight: 700;
+    font-size: 82px;
+  }
+
+  > img {
+    width: 539px;
+    height: 554px;
+  }
+}
+
+.btn-secondary {
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  padding: 8px;
+
+  &:hover {
+    border: 1px solid $turquoise;
+
+    path {
+        fill: $turquoise;
+    }
+  }
+}
