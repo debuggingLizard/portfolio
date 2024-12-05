@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+$red: #E15544;
+$turquoise: #02F4BF;
+$dark-blue: #0B042D; //oder das soll da einfach transparent sein
+$light-grey: #BEBEBE;
+$error-red: #F92103;
+$success-green: #61E106;
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url(./assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf);
+}
+
+
+
+* {
+    font-family: 'Roboto Mono';
+}
+
+body {
+    background-color: #120B35;
+    color: whitesmoke;
+}
