@@ -1,0 +1,42 @@
+@import './../../../../styles-var.scss';
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
+    >div {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+    }
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    font-size: 22px;
+    font-weight: 500;
+
+    a {
+        &:active {
+            font-weight: 700;
+            text-decoration: underline;
+        }
+    }
+}
+
+.lang-switch {
+    display: flex;
+    gap: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $red;
+}
+
+a {
+    &:hover {
+        color: $turquoise;
+    }
+}
+
