@@ -1,1 +1,18 @@
-<p>references works!</p>
+<section>
+    <h4>Need a teamplayer? Here's what my colleagues said about me</h4>
+
+    <div class="references-container">
+        <img src="./assets/img/arrow-reference.svg" alt="">
+
+        @for (reference of references; track $index) {
+        <div class="reference">
+            <div>
+                <h4>{{reference.name}}</h4>
+                <p>{{reference.project}}</p>
+            </div>
+            <p>{{reference.text}}</p>
+        </div>
+        }
+
+    </div>
+</section>
