@@ -1,1 +1,22 @@
-<p>projects works!</p>
+<section>
+    <h3>My Projects</h3>
+
+    @for (project of projects; track $index) {
+    <div class="project-details">
+        <h4>{{project.projectName}}</h4>
+        <div>
+            <span>Angular</span> |
+            <span>TypeScript</span>
+        </div>
+        <p>{{project.description}}</p>
+        <div>
+            <a href="{{project.links.github}}" target="_blank" rel="noopener noreferrer">
+                <button class="btn-secondary">GitHub</button>
+            </a>
+            <a href="{{project.links.live}}" target="_blank" rel="noopener noreferrer">
+                <button class="btn-primary">LiveTest</button>
+            </a>
+        </div>
+    </div>
+    }
+</section>
