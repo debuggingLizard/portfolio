@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<section>
+    <h3>My Skills</h3>
+    <div>
+        @for (skill of skills; track $index) {
+            <div class="skill-item">
+                <img src="./assets/img/skills/{{skill.skillIcon}}" alt="{{skill.skillName}}">
+                <span>{{skill.skillName}}</span>
+            </div>
+        }
+        <div class="challenge">
+            <div class="skill-item">
+                <img src="./assets/img/challenge-me.svg" alt="">
+                <span>Challenge me</span>
+            </div>
+            <p>I am always happy to learn new technologies,
+                just tell me what you need.</p>
+        </div>
+    </div>
+</section>

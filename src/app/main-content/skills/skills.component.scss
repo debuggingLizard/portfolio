@@ -1,0 +1,41 @@
+@import './../../../styles-var.scss';
+
+section {
+    >div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 64px;
+    }
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 130px;
+    color: $turquoise;
+    font-weight: 700;
+    font-size: 18px;
+
+    img {
+        height: 60px;
+        width: fit-content;
+    }
+}
+
+.challenge {
+    display: flex;
+    gap: 16px;
+    color: $turquoise;
+
+    p {
+        width: 253px;
+        opacity: 0;
+        transition: 0.2s ease-in-out;
+    }
+
+    .skill-item:hover + p {
+        opacity: 1;
+    }
+}
