@@ -3,16 +3,21 @@
 
     <div class="project-list">
         @for (project of projects; track $index) {
-            <div>
-                <img src="./assets/img/project-join.png" alt="">
+            <div [class.img-right]="$index % 2 !== 0">
+                    <img src="./assets/img/{{project.screenshot}}" alt="{{project.projectName}}">
+               
                 <div class="project-details">
                     <h4>{{project.projectName}}</h4>
                     <div>
-                        <span>Angular</span> |
-                        <span>TypeScript</span>
+                        @for (language of project.languages; track $index) {
+                            <span>{{language}}</span>
+                            @if (!$last) {
+                                |
+                            }
+                        }
                     </div>
                     <p>{{project.description}}</p>
-                    <div>
+                    <div class="buttons">
                         <a href="{{project.links.github}}" target="_blank" rel="noopener noreferrer">
                             <button class="btn-secondary">GitHub</button>
                         </a>
