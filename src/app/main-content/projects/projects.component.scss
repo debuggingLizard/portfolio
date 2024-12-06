@@ -1,5 +1,11 @@
 @import './../../../styles-var.scss';
 
+.project-list {
+    >div {
+        display: flex;
+    }
+}
+
 .project-details {
     color: $turquoise;
 }
