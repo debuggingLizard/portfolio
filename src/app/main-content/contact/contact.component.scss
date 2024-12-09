@@ -1,6 +1,24 @@
 @import "./../../../styles-var.scss";
 
 section {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    >div:first-of-type {
+        display: flex;
+        gap: 42px;
+
+        h3 {
+            line-height: 1.2;
+        }
+
+        img {
+            height: min-content;
+            align-self: flex-end;
+        }
+    }
+
   p,
   span {
     color: $turquoise;
@@ -9,9 +27,45 @@ section {
 
 .details {
   display: flex;
+  gap: 48px;
 
-  > p,
   > div {
-    flex: 1;
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
+
+  >p {
+    width: 45%;
+    font-size: 18px;
+    text-align: justify;
+  }
+}
+
+.contact {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    width: fit-content;
+
+    span {
+        font-weight: 500;
+        font-size: 20px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        path {
+            fill: $turquoise;
+        }
+    }
+}
+
+.email {
+    &:active {
+        span {
+            text-decoration: underline;
+        }
+    }
 }
