@@ -1,0 +1,17 @@
+@import "./../../../styles-var.scss";
+
+section {
+  p,
+  span {
+    color: $turquoise;
+  }
+}
+
+.details {
+  display: flex;
+
+  > p,
+  > div {
+    flex: 1;
+  }
+}
