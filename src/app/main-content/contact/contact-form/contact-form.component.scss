@@ -1,25 +1,75 @@
 /* Style inputs with type="text", select elements and textareas */
-// input[type=text],[type=email], select, textarea 
-@import './../../../../styles-var.scss';
+// input[type=text],[type=email], select, textarea
+@import "./../../../../styles-var.scss";
 
 form {
+  display: flex;
+  flex-direction: column;
+
+  > div:first-child {
     display: flex;
-    flex-direction: column;
+    gap: 32px;
+
+    .left {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .right {
+      width: 55%;
+    }
+  }
 }
 
-input[type=text],[type=email], textarea {
-    background-color: unset;
-    border: 1.5px solid $turquoise;
+input[type="text"],
+[type="email"],
+textarea {
+  background-color: unset;
+  border: 1.5px solid $turquoise;
+  color: $turquoise;
+  font-size: 18px;
+  padding: 12px 8px;
+  width: 100%;
+  box-sizing: border-box;
+
+  &::placeholder {
     color: $turquoise;
-    font-size: 18px;
-    padding: 12px 8px;
+    opacity: 60%;
+  }
+
+  &:focus {
+    outline: none;
 
     &::placeholder {
-        color: $turquoise;
-        opacity: 60%;
+        color: transparent;
     }
+  }
+}
+
+textarea {
+  resize: none;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: unset;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(2, 244, 192, 0.6);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $turquoise;
+  }
 }
 
 label {
-    display: none;
+  display: none;
 }
