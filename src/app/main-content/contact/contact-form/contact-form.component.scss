@@ -1,0 +1,25 @@
+/* Style inputs with type="text", select elements and textareas */
+// input[type=text],[type=email], select, textarea 
+@import './../../../../styles-var.scss';
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text],[type=email], textarea {
+    background-color: unset;
+    border: 1.5px solid $turquoise;
+    color: $turquoise;
+    font-size: 18px;
+    padding: 12px 8px;
+
+    &::placeholder {
+        color: $turquoise;
+        opacity: 60%;
+    }
+}
+
+label {
+    display: none;
+}
