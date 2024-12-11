@@ -5,7 +5,7 @@
                 <div>
                     <label for="name">Name</label>
                     <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                        placeholder="Your Name" required>
+                        placeholder="Your Name" autocomplete="name" required>
                     @if (!name.valid && name.touched && formSubmitted) {
                     <span>Your Name is required</span>
                     }
@@ -13,7 +13,7 @@
                 <div>
                     <label for="email">Email</label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                        placeholder="Your Email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                        placeholder="Your Email" autocomplete="email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                     @if (!email.valid && email.touched && formSubmitted) {
                     <span>Your Email is required</span>
                     }
