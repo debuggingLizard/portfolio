@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,24 +11,48 @@ import { FormsModule, NgForm } from '@angular/forms';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
-
+  mailTest:boolean = true;
   http = inject(HttpClient);
 
-  contactData = {
+  contactData: {
+    name: string;
+    email: string;
+    message: string;
+} = {
     name: "",
     email: "",
     message: "",
   };
 
-  // privacyVal = {
-  //   val: false,
-  // }
   formSubmitted:boolean = false;
+  placeholderName:string = "Your Name";
+  placeholderEmail:string = "Your Email";
+  placeholderMessage:string = "Your Message";
+  nameInvalid:string = "";
+  emailInvalid:string = "";
+  messageInvalid:string = "";
+  
+  checkForm(input:NgModel) {
+    if (!input.valid && input.touched) {
+      if (input.name == 'name') {
+        this.nameInvalid = 'is-invalid';
+        this.placeholderName = 'Your Name is required';
+      } else if (input.name == 'email') {
+        this.emailInvalid = 'is-invalid';
+        this.placeholderEmail = 'Your Email is required';
+      } else if (input.name == 'message') {
+        this.messageInvalid = 'is-invalid';
+        this.placeholderMessage = 'Your Message is required';
+      }
+    }
+  }
 
-  mailTest = true;
+  checkBoxChange() {
+      this.formSubmitted = false;
+  }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://lisamariemaliga.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -38,13 +62,15 @@ export class ContactFormComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm, name:NgModel, email:NgModel, message:NgModel) {
+    this.checkForm(name);
+    this.checkForm(email);
+    this.checkForm(message);
     this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
             ngForm.resetForm();
           },
           error: (error) => {

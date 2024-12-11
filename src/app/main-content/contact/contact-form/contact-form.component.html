@@ -1,37 +1,37 @@
 <div class="container">
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <form (ngSubmit)="onSubmit(contactForm, name, email, message)" #contactForm="ngForm">
         <div>
             <div class="left">
                 <div>
                     <label for="name">Name</label>
                     <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                        placeholder="Your Name" autocomplete="name" required>
-                    @if (!name.valid && name.touched && formSubmitted) {
+                        [placeholder]="placeholderName" [ngClass]="nameInvalid" autocomplete="name" required>
+                    <!-- @if (!name.valid && name.touched && formSubmitted) {
                     <span>Your Name is required</span>
-                    }
+                    } -->
                 </div>
                 <div>
                     <label for="email">Email</label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                        placeholder="Your Email" autocomplete="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-                    @if (!email.valid && email.touched && formSubmitted) {
+                    [placeholder]="placeholderEmail" [ngClass]="emailInvalid" autocomplete="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    <!-- @if (!email.valid && email.touched && formSubmitted) {
                     <span>Your Email is required</span>
-                    }
+                    } -->
                 </div>
             </div>
             <div class="right">
                 <label for="message">Message</label>
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
-                    placeholder="Your Message" required></textarea>
-                @if (!message.valid && message.touched && formSubmitted) {
+                [placeholder]="placeholderMessage" [ngClass]="messageInvalid" required></textarea>
+                <!-- @if (!message.valid && message.touched && formSubmitted) {
                 <span>Your Message is required</span>
-                }
+                } -->
             </div>
         </div>
         <div class="bottom">
             <div>
                 <label for="privacy">
-                    <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy" required>
+                    <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy" (change)="checkBoxChange()" required>
                     <span class="checkmark"></span>
                 </label>
                 <p>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
