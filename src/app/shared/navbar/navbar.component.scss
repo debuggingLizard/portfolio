@@ -1,6 +1,11 @@
-@import './../../../../styles-var.scss';
+@import './../../../styles-var.scss';
 
 nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, #120b35 60%, transparent );
     display: flex;
     align-items: center;
     gap: 38px;
