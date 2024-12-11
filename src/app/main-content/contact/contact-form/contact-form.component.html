@@ -28,13 +28,20 @@
                 }
             </div>
         </div>
-        <div>
-            <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy" required>
-            <span>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
-            @if (!privacy.valid && privacy.touched && formSubmitted) {
-            <span>Please accept the privacy policy.</span>
-            }
-            <input type="submit" value="submit">
+        <div class="bottom">
+            <div>
+                <label for="privacy">
+                    <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy" required>
+                    <span class="checkmark"></span>
+                    <span>
+                        I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
+                    </span>
+                </label>
+                @if (!privacy.valid && privacy.touched && formSubmitted) {
+                <span class="error">Please accept the privacy policy.</span>
+                }
+            </div>
+            <button class="btn-secondary" type="submit">Send</button>
         </div>
     </form>
 </div>

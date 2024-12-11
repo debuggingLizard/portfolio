@@ -5,6 +5,8 @@
 form {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  color: $turquoise;
 
   > div:first-child {
     display: flex;
@@ -43,7 +45,7 @@ textarea {
     outline: none;
 
     &::placeholder {
-        color: transparent;
+      color: transparent;
     }
   }
 }
@@ -72,4 +74,85 @@ textarea {
 
 label {
   display: none;
+}
+
+.error {
+    color: $red;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    button {
+        align-self: flex-end;
+    }
+
+  >div:first-child {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+
+    >span {
+        padding-left: 32px;
+        position: absolute;
+        top: 36px;
+       
+    }
+  }
+
+  label {
+    display: inline-block;
+    position: relative;
+    padding-left: 32px;
+    cursor: pointer;
+    font-size: 18px;
+    user-select: none;
+
+    &:hover .checkmark {
+        background-color: $turquoise;
+      }
+  }
+
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    &:checked ~ .checkmark:after {
+      display: block;
+    }
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: unset;
+    border: 2px solid $red;
+    border-radius: 4px;
+    transition: 0.2s;
+    &:after {
+      content: "";
+      position: absolute;
+      display: none;
+      left: 6px;
+      top: 2px;
+      width: 4px;
+      height: 10px;
+      border: solid $red;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+  }
+ 
+
+  span {
+    font-size: 14px;
+
+  }
 }
