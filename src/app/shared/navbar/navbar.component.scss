@@ -1,9 +1,10 @@
 @import './../../../styles-var.scss';
 
 nav {
-    position: -webkit-sticky;
-    position: sticky;
+    // position: -webkit-sticky;
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
     background: linear-gradient(to bottom, #120b35 60%, transparent );
     display: flex;

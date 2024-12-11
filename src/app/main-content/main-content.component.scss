@@ -5,3 +5,14 @@
 // <app-references></app-references>
 // <app-contact></app-contact>
 
+app-hero {
+    display: flex;
+    height: 100vh;
+    padding: 0 48px;
+}
+
+app-about, app-skills, app-projects, app-references, app-contact {
+    display: flex;
+
+    padding: 0 48px;
+}

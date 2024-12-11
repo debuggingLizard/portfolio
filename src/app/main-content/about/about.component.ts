@@ -9,4 +9,18 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
 
+  icons = {
+    location: {
+      standard: "./assets/img/location.svg",
+      hover: "./assets/img/location-hover.svg",
+    },
+    remote: {
+      standard: "./assets/img/remote.svg",
+      hover: "./assets/img/remote-hover.svg",
+    }
+  }
+
+  iconLocation = this.icons.location.standard;
+  iconRemote = this.icons.remote.standard;
+
 }
