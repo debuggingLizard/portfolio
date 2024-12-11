@@ -1,5 +1,3 @@
-/* Style inputs with type="text", select elements and textareas */
-// input[type=text],[type=email], select, textarea
 @import "./../../../../styles-var.scss";
 
 form {
@@ -29,7 +27,7 @@ input[type="text"],
 [type="email"],
 textarea {
   background-color: unset;
-  border: 1.5px solid $turquoise;
+  border: 1.6px solid $turquoise;
   color: $turquoise;
   font-size: 18px;
   padding: 12px 8px;
@@ -77,59 +75,40 @@ label {
 }
 
 .error {
-    color: $red;
+  color: $red;
 }
 
 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  button {
+    align-self: flex-end;
+  }
+
+  div {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 12px;
-
-    button {
-        align-self: flex-end;
-    }
-
-  >div:first-child {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    position: relative;
-
-    >span {
-        padding-left: 32px;
-        position: absolute;
-        top: 36px;
-       
-    }
   }
 
   label {
-    display: inline-block;
-    position: relative;
-    padding-left: 32px;
+    display: flex;
+    align-items: center;
     cursor: pointer;
-    font-size: 18px;
-    user-select: none;
-
-    &:hover .checkmark {
-        background-color: $turquoise;
-      }
   }
 
   input[type="checkbox"] {
     position: absolute;
     opacity: 0;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
-    height: 0;
-    width: 0;
-    &:checked ~ .checkmark:after {
-      display: block;
-    }
   }
+
   .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     height: 18px;
     width: 18px;
     background-color: unset;
@@ -149,10 +128,29 @@ label {
       transform: rotate(45deg);
     }
   }
- 
 
-  span {
+  input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+  }
+
+  input[type="checkbox"]:hover + .checkmark {
+    background-color: $turquoise;
+  }
+
+  p {
     font-size: 14px;
+    position: relative;
 
+    a {
+      transition: 0.2s;
+      &:hover {
+        font-weight: 700;
+      }
+    }
+
+    .error {
+      position: absolute;
+      top: 33.2px;
+    }
   }
 }
