@@ -11,7 +11,7 @@
             <div class="row-one">
                 <h3>I am</h3>
                 <div class="short-info">
-                    <img class="location" [src]="iconLocation" (mouseover)="iconLocation = icons.location.hover" (mouseleave)="iconLocation = icons.location.standard" alt="">
+                    <img class="location" [src]="iconLocation" (mouseover)="changeImage(true, 'location')" (mouseleave)="changeImage(false, 'location')" alt="">
                     <span>located <br> in Rostock </span>
                 </div>
             </div>
@@ -21,7 +21,7 @@
             <div class="row-three">
                 <div class="short-info">
                     <div class="remote">
-                        <img [src]="iconRemote" (mouseover)="iconRemote = icons.remote.hover" (mouseleave)="iconRemote = icons.remote.standard" alt="">
+                        <img [src]="iconRemote" (mouseover)="changeImage(true, 'remote')" (mouseleave)="changeImage(false, 'remote')" alt="">
                     </div>
                     <span>open to <br>  work remote</span>
                 </div>

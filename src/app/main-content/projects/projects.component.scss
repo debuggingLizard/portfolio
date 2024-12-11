@@ -16,7 +16,7 @@ section {
 
   > div {
     display: flex;
-    gap: 32px;
+    gap: 48px;
 
     > img {
       flex: 1;
@@ -61,7 +61,7 @@ section {
   }
 
   p {
-    padding: 20px 0;
+    padding: 20px 0 32px;
   }
 
   .buttons {

@@ -23,4 +23,12 @@ export class AboutComponent {
   iconLocation = this.icons.location.standard;
   iconRemote = this.icons.remote.standard;
 
+  changeImage(isHovering:boolean, type:string) {
+    if (type == 'location') {
+      this.iconLocation = isHovering ? this.icons.location.hover : this.icons.location.standard;
+    } else {
+      this.iconRemote = isHovering ? this.icons.remote.hover : this.icons.remote.standard;
+    }
+  }
+
 }

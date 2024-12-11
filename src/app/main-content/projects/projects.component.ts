@@ -36,7 +36,7 @@ export class ProjectsComponent {
       description:
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       links: {
-        github: '',
+        github: 'https://github.com/debuggingLizard/el-pollo-loco',
         live: '',
       },
       screenshot: 'project-epl.png',
