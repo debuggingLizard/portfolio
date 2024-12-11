@@ -32,8 +32,7 @@ section {
   > div {
     width: 55%;
     display: flex;
-    flex-direction: column;
-    gap: 16px;
+    justify-content: space-between;
   }
 
   >p {
@@ -43,29 +42,57 @@ section {
   }
 }
 
-.contact {
+.contact-info {
     display: flex;
+    flex-direction: column;
     gap: 16px;
-    align-items: center;
-    width: fit-content;
 
-    span {
-        font-weight: 500;
-        font-size: 20px;
-    }
+    >div {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        width: fit-content;
 
-    &:hover {
-        path {
-            fill: $turquoise;
-        }
-    }
-}
-
-.email {
-    cursor: pointer;
-    &:active {
         span {
-            text-decoration: underline;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        &:hover {
+            path {
+                fill: $turquoise;
+            }
+        }
+    }
+
+    .email {
+        cursor: pointer;
+        &:active {
+            span {
+                text-decoration: underline;
+            }
         }
     }
 }
+
+.arrow-up {
+    display: flex;
+    align-items: flex-end;
+
+    svg {
+        transform: rotate(180deg);
+        cursor: pointer;
+        padding: 8px;
+        border: 1px solid transparent;
+
+        &:hover {
+            border: 1px solid $turquoise;
+        
+            path {
+                fill: $turquoise;
+            }
+          }
+    }
+}
+
+
