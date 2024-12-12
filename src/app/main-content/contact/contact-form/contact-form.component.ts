@@ -2,42 +2,50 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, RouterModule],
   templateUrl: './contact-form.component.html',
-  styleUrl: './contact-form.component.scss'
+  styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
-  mailTest:boolean = true;
+  constructor(private router: Router) {}
+
+  openInNewTab(url: string) {
+    const baseUrl = this.router.serializeUrl(this.router.createUrlTree([url]));
+    window.open(baseUrl, '_blank', 'noopener noreferrer');
+  }
+
+  mailTest: boolean = true;
   http = inject(HttpClient);
 
   contactData: {
     name: string;
     email: string;
     message: string;
-} = {
-    name: "",
-    email: "",
-    message: "",
+  } = {
+    name: '',
+    email: '',
+    message: '',
   };
 
-  formSubmitted:boolean = false;
-  messageSent:boolean = false;
-  placeholderName:string = "Your Name";
-  placeholderEmail:string = "Your Email";
-  placeholderMessage:string = "Your Message";
-  nameInvalid:string = "";
-  emailInvalid:string = "";
-  messageInvalid:string = "";
+  formSubmitted: boolean = false;
+  messageSent: boolean = false;
+  placeholderName: string = 'Your Name';
+  placeholderEmail: string = 'Your Email';
+  placeholderMessage: string = 'Your Message';
+  nameInvalid: string = '';
+  emailInvalid: string = '';
+  messageInvalid: string = '';
   validationIcons = {
-    valid: "./assets/img/valid.svg",
-    invalid: "./assets/img/invalid.svg",
-  }
-  
-  checkForm(input:NgModel) {
+    valid: './assets/img/valid.svg',
+    invalid: './assets/img/invalid.svg',
+  };
+
+  checkForm(input: NgModel) {
     if (!input.valid) {
       if (input.name == 'name') {
         this.nameInvalid = 'is-invalid';
@@ -64,7 +72,7 @@ export class ContactFormComponent {
   }
 
   checkBoxChange() {
-      this.formSubmitted = false;
+    this.formSubmitted = false;
   }
 
   resetMessageSent() {
@@ -84,13 +92,14 @@ export class ContactFormComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm, name:NgModel, email:NgModel, message:NgModel) {
+  onSubmit(ngForm: NgForm, name: NgModel, email: NgModel, message: NgModel) {
     this.checkForm(name);
     this.checkForm(email);
     this.checkForm(message);
     this.formSubmitted = true;
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      this.http.post(this.post.endPoint, this.post.body(this.contactData))
+      this.http
+        .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
@@ -103,7 +112,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
       ngForm.resetForm();
       this.formSubmitted = false;
       this.messageSent = true;
