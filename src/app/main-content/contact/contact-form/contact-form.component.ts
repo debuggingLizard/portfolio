@@ -3,16 +3,20 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
+import { TranslationService } from '../../../translation.service';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
-  imports: [CommonModule, FormsModule, RouterModule],
+  imports: [CommonModule, FormsModule, RouterModule, TranslateModule],
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
 export class ContactFormComponent {
   constructor(private router: Router) {}
+
+  translate = inject(TranslationService);
 
   openInNewTab(url: string) {
     const baseUrl = this.router.serializeUrl(this.router.createUrlTree([url]));

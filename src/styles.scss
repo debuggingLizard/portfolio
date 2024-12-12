@@ -9,6 +9,18 @@
   font-family: "Roboto Mono";
   margin: 0;
   scroll-behavior: smooth;
+
+  strong {
+    color: $red;
+  }
+
+  .legal {
+    h3 {
+      font-size: 24px;
+    margin-top: 8px;
+    color: $turquoise;
+    }
+  }
 }
 
 body {

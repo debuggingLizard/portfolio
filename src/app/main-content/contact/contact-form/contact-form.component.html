@@ -47,23 +47,23 @@
                         (change)="checkBoxChange(); resetMessageSent()" required>
                     <span class="checkmark"></span>
                 </label>
-                <p>I've read the <a (click)="openInNewTab('/privacy')">privacy policy</a> and agree to the processing of my data as outlined.
+                <p><span>{{'contact.contact-form.privacy-before' | translate}} <a (click)="openInNewTab('/privacy')">{{'contact.contact-form.privacy-a' | translate}}</a> {{'contact.contact-form.privacy-after' | translate}}</span>
                     <br>
                     @if (!privacy.valid && formSubmitted) {
-                    <span class="error">Please accept the privacy policy.</span>
+                    <span class="error">{{'contact.contact-form.privacy-error' | translate}}</span>
                     }
                 </p>
             </div>
 
             @if (!contactForm.valid) {
-            <button class="btn-secondary disabled" type="submit">Send</button>
+            <button class="btn-secondary disabled" type="submit">{{'contact.contact-form.submit' | translate}}</button>
             } @else {
-            <button class="btn-secondary" type="submit">Send</button>
+            <button class="btn-secondary" type="submit">{{'contact.contact-form.submit' | translate}}</button>
             }
 
             <span>
                 @if (messageSent) {
-                Your Message has been sent
+                    {{'contact.contact-form.success-message' | translate}}
                 }
             </span>
 

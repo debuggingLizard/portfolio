@@ -1,5 +1,5 @@
 <section>
-    <h3>My Projects</h3>
+    <h3>{{'projects.title' | translate}}</h3>
 
     <div class="project-list">
         @for (project of projects; track $index) {
@@ -16,7 +16,7 @@
                             }
                         }
                     </div>
-                    <p>{{project.description}}</p>
+                    <p>{{ 'projects.render.' + $index + '.description' | translate}}</p>
                     <div class="buttons">
                         <a href="{{project.links.github}}" target="_blank" rel="noopener noreferrer">
                             <button class="btn-secondary">GitHub</button>

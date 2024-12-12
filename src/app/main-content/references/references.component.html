@@ -1,5 +1,5 @@
 <section>
-    <h4>Need a teamplayer? Here's what my colleagues said about me</h4>
+    <h4>{{'references.title' | translate}}</h4>
 
     <div class="references-container">
         <img src="./assets/img/arrow-reference.svg" alt="visual arrow pointing towards testimonials">
@@ -8,9 +8,9 @@
         <div class="reference">
             <div>
                 <h4>{{reference.name}}</h4>
-                <p>{{reference.project}}</p>
+                <p>{{ 'references.render.' + $index + '.project-name' | translate}}</p>
             </div>
-            <p>{{reference.text}}</p>
+            <p>{{ 'references.render.' + $index + '.text' | translate}}</p>
         </div>
         }
 

@@ -2,18 +2,16 @@
     <img src="./assets/img/Why me.png" alt="another portrait image of myself">
 
     <div>
-        <h3>Why me</h3>
-        <p>I am motivated to continuously learn new technologies and develop <br> myself.
-            My ability to solve complex problems and my passion for <br> programming make
-            me a valuable member of your team.</p>
+        <h3>{{'navbar.about' | translate}}</h3>
+        <p>{{'about.self-portrait' | translate}}</p>
 
         <div class="short-info-container">
             <div class="row-one">
-                <h3>I am</h3>
+                <h3>{{'about.one-h3' | translate}}</h3>
                 <div class="short-info">
                     <img class="location" [src]="iconLocation" (mouseover)="changeImage(true, 'location')"
                         (mouseleave)="changeImage(false, 'location')" alt="image of a map marker indicating location">
-                    <span>located <br> in Rostock </span>
+                    <span [innerHTML]="'about.one-location' | translate"></span>
                 </div>
             </div>
             <div class="row-two">
@@ -27,7 +25,7 @@
                             (mouseleave)="changeImage(false, 'remote')"
                             alt="image of a laptop indicating remote working">
                     </div>
-                    <span>open to <br> work remote</span>
+                    <span [innerHTML]="'about.three-remote' | translate"></span>
                 </div>
             </div>
             <div class="row-four">
@@ -36,7 +34,7 @@
             </div>
         </div>
         <a href="#contact">
-            <button class="btn-primary">Let's talk</button>
+            <button class="btn-primary">{{'about.talk' | translate}}</button>
         </a>
     </div>
 </section>

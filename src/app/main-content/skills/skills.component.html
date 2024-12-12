@@ -1,5 +1,5 @@
 <section>
-    <h3>My Skills</h3>
+    <h3>{{'skills.title' | translate}}</h3>
     <div>
         @for (skill of skills; track $index) {
             <div class="skill-item">
@@ -12,8 +12,7 @@
                 <img src="./assets/img/challenge-me.svg" alt="Challenge Me">
                 <span>Challenge me</span>
             </div>
-            <p>I am always happy to learn new technologies,
-                just tell me what you need.</p>
+            <p>{{'skills.challenge-text' | translate}}</p>
         </div>
     </div>
 </section>
