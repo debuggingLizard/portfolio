@@ -81,4 +81,10 @@ h3 {
     color: #827b7b;
     font-weight: 500;
   }
+
+  &.disabled {
+    border: 1px solid #827b7b;
+    color: #827b7b;
+    font-weight: 500;
+  }
 }

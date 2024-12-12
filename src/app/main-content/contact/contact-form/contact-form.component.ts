@@ -31,9 +31,13 @@ export class ContactFormComponent {
   nameInvalid:string = "";
   emailInvalid:string = "";
   messageInvalid:string = "";
+  validationIcons = {
+    valid: "./assets/img/valid.svg",
+    invalid: "./assets/img/invalid.svg",
+  }
   
   checkForm(input:NgModel) {
-    if (!input.valid && input.touched) {
+    if (!input.valid) {
       if (input.name == 'name') {
         this.nameInvalid = 'is-invalid';
         this.placeholderName = 'Your Name is required';

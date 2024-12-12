@@ -23,19 +23,7 @@ form {
   }
 }
 
-.is-invalid {
-  &::placeholder {
-    color: $error-red !important;
-    font-size: 14px !important;
-    opacity: 1 !important;
-  }
 
-  &:focus {
-    &::placeholder {
-      color: transparent !important;
-    }
-  }
-}
 
 
 input[type="text"],
@@ -90,7 +78,7 @@ label {
 }
 
 .error {
-  color: $red;
+  color: $error-red;
 }
 
 .bottom {
@@ -167,5 +155,41 @@ label {
       position: absolute;
       top: 33.2px;
     }
+  }
+}
+
+.is-invalid {
+  &::placeholder {
+    color: $error-red !important;
+    font-size: 14px !important;
+    opacity: 1 !important;
+  }
+
+  &:focus {
+    &::placeholder {
+      color: transparent !important;
+    }
+  }
+}
+
+.input-validity {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  img {
+    position: absolute;
+    right: 12px;
+    height: 18px;
+  }
+
+  
+}
+
+.message-validity {
+  align-items: flex-start;
+
+  img {
+    top: 12px;
   }
 }

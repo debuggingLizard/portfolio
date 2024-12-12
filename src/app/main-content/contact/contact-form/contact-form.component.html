@@ -2,46 +2,62 @@
     <form (ngSubmit)="onSubmit(contactForm, name, email, message)" #contactForm="ngForm">
         <div>
             <div class="left">
-                <div>
+                <div class="input-validity">
                     <label for="name">Name</label>
                     <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                        [placeholder]="placeholderName" [ngClass]="nameInvalid" autocomplete="name" required>
-                    <!-- @if (!name.valid && name.touched && formSubmitted) {
-                    <span>Your Name is required</span>
-                    } -->
+                        [placeholder]="placeholderName" [ngClass]="nameInvalid" autocomplete="name"
+                        pattern="^[a-zA-ZäöüÄÖÜßàáâãäåèéêëìíîïòóôõöùúûüýÿ'-]{2,}$" required>
+
+                    @if (!name.valid && contactForm.submitted) {
+                    <img [src]="validationIcons.invalid" alt="">
+                    } @else if (name.valid && contactForm.submitted) {
+                    <img [src]="validationIcons.valid" alt="">
+                    }
                 </div>
-                <div>
+                <div class="input-validity">
                     <label for="email">Email</label>
                     <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                    [placeholder]="placeholderEmail" [ngClass]="emailInvalid" autocomplete="email" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
-                    <!-- @if (!email.valid && email.touched && formSubmitted) {
-                    <span>Your Email is required</span>
-                    } -->
+                        [placeholder]="placeholderEmail" [ngClass]="emailInvalid" autocomplete="email"
+                        pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
+                    @if (!email.valid && contactForm.submitted) {
+                    <img [src]="validationIcons.invalid" alt="">
+                    } @else if (email.valid && contactForm.submitted) {
+                    <img [src]="validationIcons.valid" alt="">
+                    }
                 </div>
             </div>
-            <div class="right">
+            <div class="right input-validity message-validity">
                 <label for="message">Message</label>
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
-                [placeholder]="placeholderMessage" [ngClass]="messageInvalid" required></textarea>
-                <!-- @if (!message.valid && message.touched && formSubmitted) {
-                <span>Your Message is required</span>
-                } -->
+                    [placeholder]="placeholderMessage" [ngClass]="messageInvalid" pattern="[\s\S]{20,}" required></textarea>
+                @if (!message.valid && contactForm.submitted) {
+                <img [src]="validationIcons.invalid" alt="">
+                } @else if (message.valid && contactForm.submitted) {
+                <img [src]="validationIcons.valid" alt="">
+                }
             </div>
         </div>
         <div class="bottom">
             <div>
                 <label for="privacy">
-                    <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy" (change)="checkBoxChange()" required>
+                    <input #privacy="ngModel" ngModel type="checkbox" name="privacy" id="privacy"
+                        (change)="checkBoxChange()" required>
                     <span class="checkmark"></span>
                 </label>
                 <p>I've read the <a href="">privacy policy</a> and agree to the processing of my data as outlined.
                     <br>
-                    @if (!privacy.valid && privacy.touched && formSubmitted) {
+                    @if (!privacy.valid && formSubmitted) {
                     <span class="error">Please accept the privacy policy.</span>
                     }
                 </p>
             </div>
+
+            @if (!contactForm.valid) {
+            <button class="btn-secondary disabled" type="submit">Send</button>
+            } @else {
             <button class="btn-secondary" type="submit">Send</button>
+            }
+
         </div>
     </form>
 </div>
