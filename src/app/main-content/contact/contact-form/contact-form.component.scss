@@ -90,6 +90,12 @@ label {
     align-self: flex-end;
   }
 
+  >span {
+    text-align: right;
+    font-size: 18px;
+    height: 24px;
+  }
+
   div {
     display: flex;
     align-items: center;

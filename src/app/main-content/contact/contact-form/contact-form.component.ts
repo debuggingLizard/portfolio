@@ -25,6 +25,7 @@ export class ContactFormComponent {
   };
 
   formSubmitted:boolean = false;
+  messageSent:boolean = false;
   placeholderName:string = "Your Name";
   placeholderEmail:string = "Your Email";
   placeholderMessage:string = "Your Message";
@@ -48,11 +49,28 @@ export class ContactFormComponent {
         this.messageInvalid = 'is-invalid';
         this.placeholderMessage = 'Your Message is required';
       }
+    } else {
+      if (input.name == 'name') {
+        this.nameInvalid = '';
+        this.placeholderName = 'Your Name';
+      } else if (input.name == 'email') {
+        this.emailInvalid = '';
+        this.placeholderEmail = 'Your Email';
+      } else if (input.name == 'message') {
+        this.messageInvalid = '';
+        this.placeholderMessage = 'Your Message';
+      }
     }
   }
 
   checkBoxChange() {
       this.formSubmitted = false;
+  }
+
+  resetMessageSent() {
+    if (this.messageSent == true) {
+      this.messageSent = false;
+    }
   }
 
   post = {
@@ -76,6 +94,8 @@ export class ContactFormComponent {
         .subscribe({
           next: (response) => {
             ngForm.resetForm();
+            this.formSubmitted = false;
+            this.messageSent = true;
           },
           error: (error) => {
             console.error(error);
@@ -85,6 +105,8 @@ export class ContactFormComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+      this.formSubmitted = false;
+      this.messageSent = true;
     }
   }
 }
