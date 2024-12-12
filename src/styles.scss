@@ -12,11 +12,10 @@
 }
 
 body {
-  background-color: #120b35;
+background: rgb(11,4,45);
+background: linear-gradient(140deg, rgba(11,4,45,1) 0%, rgba(21,7,87,1) 40%, rgba(26,10,106,1) 57%, rgba(21,7,87,1) 77%, rgba(11,4,45,1) 100%);
   color: whitesmoke;
-
 }
-
 
 a {
   text-decoration: none;
@@ -25,9 +24,9 @@ a {
 }
 
 h3 {
-    color: $red;
-    font-size: 54px;
-    font-weight: 500;
+  color: $red;
+  font-size: 54px;
+  font-weight: 500;
 }
 
 .btn-primary {
