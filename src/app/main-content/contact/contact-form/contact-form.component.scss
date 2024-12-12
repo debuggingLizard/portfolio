@@ -117,7 +117,7 @@ label {
     background-color: unset;
     border: 2px solid $red;
     border-radius: 4px;
-    transition: 0.2s;
+    transition: 125ms;
     &:after {
       content: "";
       position: absolute;
@@ -145,7 +145,7 @@ label {
     position: relative;
 
     a {
-      transition: 0.2s;
+      transition: 125ms;
       &:hover {
         font-weight: 700;
       }
