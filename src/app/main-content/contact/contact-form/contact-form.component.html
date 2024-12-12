@@ -9,9 +9,9 @@
                         pattern="^[a-zA-ZäöüÄÖÜßàáâãäåèéêëìíîïòóôõöùúûüýÿ'-]{2,}$" required>
 
                     @if (!name.valid && contactForm.submitted) {
-                    <img [src]="validationIcons.invalid" alt="">
+                    <img [src]="validationIcons.invalid" alt="invalid input">
                     } @else if (name.valid && contactForm.submitted) {
-                    <img [src]="validationIcons.valid" alt="">
+                    <img [src]="validationIcons.valid" alt="valid input">
                     }
                 </div>
                 <div class="input-validity">
@@ -20,9 +20,9 @@
                         [placeholder]="placeholderEmail" [ngClass]="emailInvalid" autocomplete="email"
                         pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" required>
                     @if (!email.valid && contactForm.submitted) {
-                    <img [src]="validationIcons.invalid" alt="">
+                    <img [src]="validationIcons.invalid" alt="invalid input">
                     } @else if (email.valid && contactForm.submitted) {
-                    <img [src]="validationIcons.valid" alt="">
+                    <img [src]="validationIcons.valid" alt="valid input">
                     }
                 </div>
             </div>
@@ -31,9 +31,9 @@
                 <textarea #message="ngModel" [(ngModel)]="contactData.message" name="message" id="message"
                     [placeholder]="placeholderMessage" [ngClass]="messageInvalid" pattern="[\s\S]{20,}" required></textarea>
                 @if (!message.valid && contactForm.submitted) {
-                <img [src]="validationIcons.invalid" alt="">
+                <img [src]="validationIcons.invalid" alt="invalid input">
                 } @else if (message.valid && contactForm.submitted) {
-                <img [src]="validationIcons.valid" alt="">
+                <img [src]="validationIcons.valid" alt="valid input">
                 }
             </div>
         </div>
