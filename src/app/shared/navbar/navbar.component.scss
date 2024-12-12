@@ -5,8 +5,10 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    padding: 24px 48px;
+    box-sizing: border-box;
     z-index: 1000;
-    background: linear-gradient(to bottom, #120b35 60%, transparent );
+    background: linear-gradient(to bottom, #120b35 66%, transparent );
     display: flex;
     align-items: center;
     gap: 38px;
