@@ -1,6 +1,10 @@
 @import './../../../styles-var.scss';
 
 section {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    width: 100%;
     >div {
         display: flex;
         flex-wrap: wrap;
