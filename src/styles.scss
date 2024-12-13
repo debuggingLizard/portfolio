@@ -29,6 +29,22 @@ background: linear-gradient(140deg, rgba(11,4,45,1) 0%, rgba(21,7,87,1) 40%, rgb
   color: whitesmoke;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(21,7,87,1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: $turquoise;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: $red;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
