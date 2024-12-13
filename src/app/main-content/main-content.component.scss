@@ -24,3 +24,15 @@ app-about, app-skills, app-projects, app-contact {
 app-references {
     padding-top: 48px;
 }
+
+@media (max-width: 800px) {
+    app-hero {
+        padding: 0 20px;
+    }
+    
+    app-about, app-skills, app-projects, app-references, app-contact {
+        display: flex;
+    
+        padding: 0 20px;
+    }
+}

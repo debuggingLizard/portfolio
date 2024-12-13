@@ -30,8 +30,10 @@ header {
   }
 
   > img {
-    width: 539px;
-    height: 554px;
+    // width: 539px;
+    // height: 554px;
+    max-width: 42%;
+    height: auto;
   }
 }
 
@@ -52,7 +54,89 @@ svg {
     border: 1px solid $turquoise;
 
     path {
-        fill: $turquoise;
+      fill: $turquoise;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .wrapper {
+    h1 {
+      font-size: 40px;
+    }
+
+    h2 {
+      font-size: 56px;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .title {
+    a {
+      display: none;
+    }
+  }
+
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: flex-start;
+    > a {
+      display: none;
+    }
+
+    .title {
+      flex: none;
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+    }
+
+    > img {
+      max-width: 62%;
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  .wrapper {
+
+    .title {
+      h1 {
+        font-size: 32px;
+      }
+
+      h2 {
+        font-size: 36px;
+      }
+    }
+
+    > img {
+      max-width: 80%;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+
+
+    > img {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+
+    .title {
+      h1 {
+        font-size: 24px;
+      }
     }
   }
 }

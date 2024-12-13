@@ -104,11 +104,7 @@ a {
 .menu-btn.open .menu-btn__burger {
   transform: rotate(45deg);
 }
-.menu-btn.open .menu-btn__burger::before {
-  transform: rotate(90deg);
-  width: 100%;
-  transform-origin: center;
-}
+.menu-btn.open .menu-btn__burger::before,
 .menu-btn.open .menu-btn__burger::after {
   transform: rotate(90deg);
   width: 100%;
@@ -118,6 +114,7 @@ a {
 @media (max-width: 800px) {
   .wrapper {
     justify-content: space-between;
+    padding: 24px 20px;
   }
 
   .menu-btn {
