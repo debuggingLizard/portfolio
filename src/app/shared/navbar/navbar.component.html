@@ -1,20 +1,22 @@
 <nav>
-    <a href="#home">
-        <img src="./assets/img/logo.png" alt="Logo">
-    </a>
+    <div class="wrapper">
+        <a href="#home">
+            <img src="./assets/img/logo.png" alt="Logo">
+        </a>
 
-    <div>
-        <div class="nav-links">
-            <a href="#about">{{'navbar.about' | translate}}</a>
-            <a href="#skills">{{'navbar.skills' | translate}}</a>
-            <a href="#projects">{{'navbar.projects' | translate}}</a>
-            <a href="#contact">{{'navbar.contact' | translate}}</a>
-        </div>
+        <div>
+            <div class="nav-links">
+                <a href="#about">{{'navbar.about' | translate}}</a>
+                <a href="#skills">{{'navbar.skills' | translate}}</a>
+                <a href="#projects">{{'navbar.projects' | translate}}</a>
+                <a href="#contact">{{'navbar.contact' | translate}}</a>
+            </div>
 
-        <div class="lang-switch">
-            <button (click)="translate.switchLanguage('de')">DE</button>
-            <span>|</span>
-            <button (click)="translate.switchLanguage('en')">EN</button>
+            <div class="lang-switch">
+                <button (click)="translate.switchLanguage('de')">DE</button>
+                <span>|</span>
+                <button (click)="translate.switchLanguage('en')">EN</button>
+            </div>
         </div>
     </div>
 </nav>
