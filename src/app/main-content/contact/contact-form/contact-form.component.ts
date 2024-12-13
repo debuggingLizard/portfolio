@@ -38,9 +38,9 @@ export class ContactFormComponent {
 
   formSubmitted: boolean = false;
   messageSent: boolean = false;
-  placeholderName: string = 'Your Name';
-  placeholderEmail: string = 'Your Email';
-  placeholderMessage: string = 'Your Message';
+  placeholderName: string = 'Name';
+  placeholderEmail: string = 'Email';
+  placeholderMessage: string = 'Message';
   nameInvalid: string = '';
   emailInvalid: string = '';
   messageInvalid: string = '';
@@ -53,24 +53,24 @@ export class ContactFormComponent {
     if (!input.valid) {
       if (input.name == 'name') {
         this.nameInvalid = 'is-invalid';
-        this.placeholderName = 'Your Name is required';
+        this.placeholderName = 'Name is required';
       } else if (input.name == 'email') {
         this.emailInvalid = 'is-invalid';
-        this.placeholderEmail = 'Your Email is required';
+        this.placeholderEmail = 'Email is required';
       } else if (input.name == 'message') {
         this.messageInvalid = 'is-invalid';
-        this.placeholderMessage = 'Your Message is required';
+        this.placeholderMessage = 'Message is required';
       }
     } else {
       if (input.name == 'name') {
         this.nameInvalid = '';
-        this.placeholderName = 'Your Name';
+        this.placeholderName = 'Name';
       } else if (input.name == 'email') {
         this.emailInvalid = '';
-        this.placeholderEmail = 'Your Email';
+        this.placeholderEmail = 'Email';
       } else if (input.name == 'message') {
         this.messageInvalid = '';
-        this.placeholderMessage = 'Your Message';
+        this.placeholderMessage = 'Message';
       }
     }
   }

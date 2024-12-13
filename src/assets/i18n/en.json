@@ -50,6 +50,7 @@
   "contact": {
     "title": "Contact me",
     "text": "Still not sure if I am the right person for your project? Contact me so I can reassure you. Let us work together",
+    "ps-de": "",
     "contact-form": {
         "privacy-before": "I've read the",
         "privacy-a": "privacy policy",

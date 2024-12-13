@@ -6,10 +6,10 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "contact": "KONTAKTIEREN"
+    "contact": "KONTAKT"
   },
   "about": {
-    "self-portrait": "Ich bin motiviert, ständig neue Technologien zu erlernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für die Programmierung machen mich zu einem wertvollen Mitglied Ihres Teams.",
+    "self-portrait": "Ich bin motiviert, ständig neue Technologien zu erlernen und mich weiterzuentwickeln. Meine Fähigkeit, komplexe Probleme zu lösen, und meine Leidenschaft für die Programmierung machen mich zu einem wertvollen Teammitglied.",
     "one-h3": "Ich bin",
     "one-location": "zu Hause <br> in Rostock",
     "three-remote": "offen für <br> remote work",
@@ -19,19 +19,19 @@
     "title": "Meine Projekte",
     "render": [
       {
-        "description": "Aufgabenmanager nach dem Vorbild des Kanban-Systems. Erstellen und organisieren Sie Aufgaben mit Hilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+        "description": "Taskmanagement nach dem Vorbild des Kanban-Systems. Aufgaben erstellen und organisieren mithilfe von Drag-and-Drop, Zuweisung von Usern und Kategorien."
       },
       {
-        "description": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen."
+        "description": "Sprung-, Lauf- und Wurfspiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen die verrückte Henne zu kämpfen!"
       }
     ]
   },
   "skills": {
     "title": "Meine Skills",
-    "challenge-text": "Ich bin immer bereit, neue Technologien zu erlernen, sagen Sie mir einfach, was Sie brauchen."
+    "challenge-text": "Ich bin immer bereit, neue Technologien zu erlernen, sagen Sie mir einfach, was Sie brauchen!"
   },
   "references": {
-    "title": "Brauchen Sie einen Teamplayer? Das sagten meine Kollegen über mich",
+    "title": "Teamplayer gesucht? Das sagen meine Kolleg:innen über mich",
     "render": [
         {
             "project-name": "Projekt Sharkie",
@@ -49,7 +49,8 @@
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "text": "Sie sind sich noch nicht sicher, ob ich die richtige Person für Ihr Projekt bin? Kontaktieren Sie mich, damit ich Sie beruhigen kann. Lassen Sie uns zusammenarbeiten",
+    "text": "Noch unsicher, ob ich die richtige Person für Ihr Projekt bin? Kontaktieren Sie mich, damit ich Sie überzeugen kann. Let's work together!",
+    "ps-de": "PS: You can say you to me :-)",
     "contact-form": {
         "privacy-before": "Ich habe die",
         "privacy-a": "Datenschutzerklärung",
