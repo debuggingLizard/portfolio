@@ -1,18 +1,20 @@
 <section>
-    <h3>{{'skills.title' | translate}}</h3>
-    <div>
-        @for (skill of skills; track $index) {
-            <div class="skill-item">
-                <img src="./assets/img/skills/{{skill.skillIcon}}" alt="{{skill.skillName}}">
-                <span>{{skill.skillName}}</span>
+    <div class="wrapper">
+        <h3>{{'skills.title' | translate}}</h3>
+        <div>
+            @for (skill of skills; track $index) {
+                <div class="skill-item">
+                    <img src="./assets/img/skills/{{skill.skillIcon}}" alt="{{skill.skillName}}">
+                    <span>{{skill.skillName}}</span>
+                </div>
+            }
+            <div class="challenge">
+                <div class="skill-item">
+                    <img src="./assets/img/challenge-me.svg" alt="Challenge Me">
+                    <span>Challenge me</span>
+                </div>
+                <p>{{'skills.challenge-text' | translate}}</p>
             </div>
-        }
-        <div class="challenge">
-            <div class="skill-item">
-                <img src="./assets/img/challenge-me.svg" alt="Challenge Me">
-                <span>Challenge me</span>
-            </div>
-            <p>{{'skills.challenge-text' | translate}}</p>
         </div>
     </div>
 </section>
