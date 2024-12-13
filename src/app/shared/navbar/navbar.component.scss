@@ -1,7 +1,6 @@
 @import './../../../styles-var.scss';
 
 nav {
-    // position: -webkit-sticky;
     position: fixed;
     top: 0;
     width: 100%;
@@ -44,6 +43,19 @@ nav {
     font-size: 18px;
     font-weight: 700;
     color: $red;
+
+    button {
+        font-size: 18px;
+        font-weight: 700;
+        color: $red;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $turquoise;
+        }
+    }
 }
 
 a {
