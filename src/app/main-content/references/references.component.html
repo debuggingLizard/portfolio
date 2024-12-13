@@ -1,18 +1,21 @@
 <section>
-    <h4>{{'references.title' | translate}}</h4>
+    <div class="wrapper">
+        <h4>{{'references.title' | translate}}</h4>
 
-    <div class="references-container">
-        <img src="./assets/img/arrow-reference.svg" alt="visual arrow pointing towards testimonials">
-
-        @for (reference of references; track $index) {
-        <div class="reference">
-            <div>
-                <h4>{{reference.name}}</h4>
-                <p>{{ 'references.render.' + $index + '.project-name' | translate}}</p>
+        <div class="references-container">
+            <img src="./assets/img/arrow-reference.svg" alt="visual arrow pointing towards testimonials">
+    
+            @for (reference of references; track $index) {
+            <div class="reference">
+                <div>
+                    <h4>{{reference.name}}</h4>
+                    <p>{{ 'references.render.' + $index + '.project-name' | translate}}</p>
+                </div>
+                <p>{{ 'references.render.' + $index + '.text' | translate}}</p>
             </div>
-            <p>{{ 'references.render.' + $index + '.text' | translate}}</p>
+            }
+    
         </div>
-        }
-
     </div>
+    
 </section>
