@@ -1,40 +1,43 @@
 <section>
-    <img src="./assets/img/Why me.png" alt="another portrait image of myself">
+    <div class="wrapper">
+        <img src="./assets/img/Why me.png" alt="another portrait image of myself">
 
-    <div>
-        <h3>{{'navbar.about' | translate}}</h3>
-        <p>{{'about.self-portrait' | translate}}</p>
-
-        <div class="short-info-container">
-            <div class="row-one">
-                <h3>{{'about.one-h3' | translate}}</h3>
-                <div class="short-info">
-                    <img class="location" [src]="iconLocation" (mouseover)="changeImage(true, 'location')"
-                        (mouseleave)="changeImage(false, 'location')" alt="image of a map marker indicating location">
-                    <span [innerHTML]="'about.one-location' | translate"></span>
-                </div>
-            </div>
-            <div class="row-two">
-                <img src="./assets/img/arrow-curve.png"
-                    alt="visual arrow pointing from my location towards my information about working remote">
-            </div>
-            <div class="row-three">
-                <div class="short-info">
-                    <div class="remote">
-                        <img [src]="iconRemote" (mouseover)="changeImage(true, 'remote')"
-                            (mouseleave)="changeImage(false, 'remote')"
-                            alt="image of a laptop indicating remote working">
+        <div>
+            <h3>{{'navbar.about' | translate}}</h3>
+            <p>{{'about.self-portrait' | translate}}</p>
+    
+            <div class="short-info-container">
+                <div class="row-one">
+                    <h3>{{'about.one-h3' | translate}}</h3>
+                    <div class="short-info">
+                        <img class="location" [src]="iconLocation" (mouseover)="changeImage(true, 'location')"
+                            (mouseleave)="changeImage(false, 'location')" alt="image of a map marker indicating location">
+                        <span [innerHTML]="'about.one-location' | translate"></span>
                     </div>
-                    <span [innerHTML]="'about.three-remote' | translate"></span>
+                </div>
+                <div class="row-two">
+                    <img src="./assets/img/arrow-curve.png"
+                        alt="visual arrow pointing from my location towards my information about working remote">
+                </div>
+                <div class="row-three">
+                    <div class="short-info">
+                        <div class="remote">
+                            <img [src]="iconRemote" (mouseover)="changeImage(true, 'remote')"
+                                (mouseleave)="changeImage(false, 'remote')"
+                                alt="image of a laptop indicating remote working">
+                        </div>
+                        <span [innerHTML]="'about.three-remote' | translate"></span>
+                    </div>
+                </div>
+                <div class="row-four">
+                    <img src="./assets/img/arrow-whirly.png"
+                        alt="visual arrow pointing from my information about working remote towards button that links to contact form">
                 </div>
             </div>
-            <div class="row-four">
-                <img src="./assets/img/arrow-whirly.png"
-                    alt="visual arrow pointing from my information about working remote towards button that links to contact form">
-            </div>
+            <a href="#contact">
+                <button class="btn-primary">{{'about.talk' | translate}}</button>
+            </a>
         </div>
-        <a href="#contact">
-            <button class="btn-primary">{{'about.talk' | translate}}</button>
-        </a>
     </div>
+    
 </section>
