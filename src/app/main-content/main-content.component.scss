@@ -32,7 +32,14 @@ app-references {
     
     app-about, app-skills, app-projects, app-references, app-contact {
         display: flex;
-    
         padding: 0 20px;
+    }
+
+    app-about, app-skills, app-projects, app-contact {
+        padding-top: 96px;
+    }
+
+    app-references {
+        padding-top: 48px;
     }
 }
