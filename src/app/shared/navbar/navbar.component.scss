@@ -4,16 +4,18 @@ nav {
   position: fixed;
   top: 0;
   z-index: 1000;
+  padding: 24px 48px;
   display: flex;
   justify-content: center;
   width: 100%;
+  box-sizing: border-box;
   background: linear-gradient(to bottom, #0c0530 66%, transparent);
 }
 
 .wrapper {
   width: 100%;
   max-width: 1440px;
-  padding: 24px 48px;
+  
   box-sizing: border-box;
   display: flex;
   align-items: center;

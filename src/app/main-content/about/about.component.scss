@@ -66,6 +66,7 @@ section {
 
     span {
       font-size: 18px;
+      width: 120px;
     }
 
 
@@ -104,11 +105,17 @@ section {
 }
 
 .row-four {
-    // padding-right: 20px;
+  >img:nth-child(2){
+    display: none;
+  }
 }
 
 .btn-primary {
   transition: none;
+}
+
+.arrow-responsive {
+  display: none;
 }
 
 @media (max-width: 1080px) {
@@ -145,6 +152,10 @@ section {
 
     .short-info {
       align-items: center;
+
+      span {
+        width: unset;
+      }
     }
   }
 
@@ -157,10 +168,35 @@ section {
 
   .row-one {
     flex-direction: column;
+
+    .short-info {
+      padding-top: 12px;
+    }
   }
 
   .row-two {
     display: none !important;
+  }
+
+  .row-four {
+    align-self: flex-end;
+
+    >img:first-child {
+      display: none;
+    }
+
+    >img:nth-child(2) {
+      display: flex;
+      transform: scaleX(-1) rotate(-12deg) scale(0.8);
+    }
+
+
+  }
+
+  .arrow-responsive {
+    display: flex;
+    align-self: flex-start;
+    padding-top: 12px;
   }
 
   .remote-text {
