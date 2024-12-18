@@ -29,8 +29,8 @@ export class ProjectsComponent {
       description:
         'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       links: {
-        github: '',
-        live: '',
+        github: 'https://github.com/debuggingLizard/join',
+        live: 'https://join.lisamariemaliga.com/login.html',
       },
       screenshot: 'project-join.png',
     },
@@ -41,7 +41,7 @@ export class ProjectsComponent {
         'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       links: {
         github: 'https://github.com/debuggingLizard/el-pollo-loco',
-        live: '',
+        live: 'https://el-pollo-loco.lisamariemaliga.com/index.html',
       },
       screenshot: 'project-epl.png',
     },
