@@ -31,6 +31,8 @@ section {
       max-width: 50%;
       opacity: 0.8;
       transition: 125ms ease-in-out;
+      object-fit: contain;
+      object-position: top;
 
       &:hover {
         opacity: 1;
@@ -75,5 +77,80 @@ section {
   .buttons {
     display: flex;
     gap: 24px;
+  }
+}
+
+.img-responsive {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .project-list {
+    >div {
+
+      >img {
+        max-width: 40%;
+      }
+      
+    }
+  }
+}
+
+
+@media (max-width: 800px) {
+  .project-list {
+    >div {
+      flex-direction: column-reverse;
+
+      >img {
+        display: none;
+      }
+      
+    }
+
+    .img-right {
+      flex-direction: column-reverse;
+
+      .project-details {
+        align-items: center;
+      }
+  
+      p {
+        text-align: center;
+      }
+    }
+  }
+
+  .project-details {
+    align-items: center;
+
+    h4, p {
+      text-align: center;
+    }
+
+
+    .languages {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+   
+    .buttons {
+      justify-content: center;
+    }
+  }
+
+  .img-responsive {
+    display: flex;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .btn-primary, 
+  .btn-secondary {
+    padding: 12px 18px;
   }
 }
