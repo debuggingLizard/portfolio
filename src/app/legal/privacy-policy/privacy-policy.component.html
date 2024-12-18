@@ -1,6 +1,6 @@
 <div class="wrapper">
     <section>
-        <h1>{{'privacy-policy.title' | translate}}</h1>
+        <h1 [innerHTML]="'privacy-policy.title' | translate"></h1>
         <h2 id="m716">{{'privacy-policy.contents.1.title' | translate}}</h2>
         <p>{{'privacy-policy.contents.1.text' | translate}}</p> <br>
         <p>{{'privacy-policy.contents.1.gender-info' | translate}}</p> <br>
@@ -33,7 +33,7 @@
         </div>
         
         
-        <h2 id="m27">{{'privacy-policy.contents.5.title' | translate}}</h2>
+        <h2 id="m27" [innerHTML]="'privacy-policy.contents.5.title' | translate"></h2>
         <div [innerHTML]="'privacy-policy.contents.5.text' | translate">
         </div>
         
