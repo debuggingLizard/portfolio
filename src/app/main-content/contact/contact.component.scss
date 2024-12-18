@@ -1,31 +1,31 @@
 @import "./../../../styles-var.scss";
 
 section {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  max-width: 1440px;
+
+  > div:first-of-type {
     display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 100%;
-    max-width: 1440px;
+    gap: 42px;
 
-    >div:first-of-type {
-        display: flex;
-        gap: 42px;
-
-        h3 {
-            line-height: 1.2;
-        }
-
-        img {
-            height: min-content;
-            align-self: flex-end;
-        }
+    h3 {
+      line-height: 1.2;
     }
+
+    img {
+      height: min-content;
+      align-self: flex-end;
+    }
+  }
 
   p,
   span {
@@ -43,7 +43,7 @@ section {
     justify-content: space-between;
   }
 
-  >p {
+  > p {
     width: 45%;
     font-size: 18px;
     text-align: justify;
@@ -51,115 +51,153 @@ section {
     flex-direction: column;
 
     span {
-        font-size: 16px;
-        margin-top: 16px;
+      font-size: 16px;
+      margin-top: 16px;
     }
   }
 }
 
 .contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  > div {
     display: flex;
-    flex-direction: column;
     gap: 16px;
+    align-items: center;
+    width: fit-content;
 
-    >div {
-        display: flex;
-        gap: 16px;
-        align-items: center;
-        width: fit-content;
-
-        span {
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        &:hover {
-            path {
-                fill: $turquoise;
-            }
-        }
+    span {
+      font-weight: 500;
+      font-size: 20px;
     }
 
-    .email {
-        cursor: pointer;
-
-        a {
-            font-weight: 500;
-            font-size: 20px;
-            color: $turquoise;
-
-            &:active {
-                text-decoration: underline;
-            }
-        }
+    &:hover {
+      path {
+        fill: $turquoise;
+      }
     }
+  }
+
+  .email {
+    cursor: pointer;
+
+    a {
+      font-weight: 500;
+      font-size: 20px;
+      color: $turquoise;
+
+      &:active {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .arrow-up {
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 
-    svg {
-        transform: rotate(180deg);
-        cursor: pointer;
-        padding: 8px;
-        border: 1px solid transparent;
+  svg {
+    transform: rotate(180deg);
+    cursor: pointer;
+    padding: 8px;
+    border: 1px solid transparent;
 
-        &:hover {
-            border: 1px solid $turquoise;
-        
-            path {
-                fill: $turquoise;
-            }
-          }
+    &:hover {
+      border: 1px solid $turquoise;
+
+      path {
+        fill: $turquoise;
+      }
     }
+  }
 }
 
-.arrow-up-responsive {
-    display: none;
+.arrow-up-responsive,
+.contact-info-responsive {
+  display: none;
 }
 
 @media (max-width: 800px) {
-    .wrapper {
-    
-        >div:first-of-type {
-            justify-content: center;
-   
-            img {
-                display: none;
-            }
-        }
+  .wrapper {
+    > div:first-of-type {
+      justify-content: center;
 
+      img {
+        display: none;
+      }
+    }
+  }
+
+  .details {
+    > p {
+      width: 100%;
+      text-align: center;
+    }
+    > div {
+      display: none;
+    }
+  }
+
+  .arrow-up-responsive {
+    display: flex;
+    justify-content: flex-end;
+
+    svg {
+      transform: rotate(180deg);
+      cursor: pointer;
+      padding: 8px;
+      border: 1px solid transparent;
+
+      &:hover {
+        border: 1px solid $turquoise;
+
+        path {
+          fill: $turquoise;
+        }
+      }
+    }
+  }
+
+  .contact-info-responsive {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      width: fit-content;
+
+      span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+
+      &:hover {
+        path {
+          fill: $turquoise;
+        }
+      }
     }
 
+    .email {
+      cursor: pointer;
 
-    .details {
-        >p {
-            width: 100%;
-            text-align: center;
-        }
-        >div {
-            display: none;
-        }
-    }
+      a {
+        font-weight: 500;
+        font-size: 18px;
+        color: $turquoise;
 
-    .arrow-up-responsive {
-        display: flex;
-        justify-content: flex-end;
-    
-        svg {
-            transform: rotate(180deg);
-            cursor: pointer;
-            padding: 8px;
-            border: 1px solid transparent;
-    
-            &:hover {
-                border: 1px solid $turquoise;
-            
-                path {
-                    fill: $turquoise;
-                }
-              }
+        &:active {
+          text-decoration: underline;
         }
+      }
     }
+  }
 }
