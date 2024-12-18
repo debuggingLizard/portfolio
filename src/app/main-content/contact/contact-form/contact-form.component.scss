@@ -23,9 +23,6 @@ form {
   }
 }
 
-
-
-
 input[type="text"],
 [type="email"],
 textarea {
@@ -90,7 +87,7 @@ label {
     align-self: flex-end;
   }
 
-  >span {
+  > span {
     text-align: right;
     font-size: 18px;
     height: 24px;
@@ -188,8 +185,6 @@ label {
     right: 12px;
     height: 18px;
   }
-
-  
 }
 
 .message-validity {
@@ -197,5 +192,41 @@ label {
 
   img {
     top: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  form {
+    > div:first-child {
+      flex-direction: column;
+
+      .left, 
+      .right {
+        width: 100%;
+      }
+    }
+  }
+
+  .bottom {
+    div {
+      align-items: flex-start;
+    }
+
+    button {
+      align-self: center;
+    }
+
+    p {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+  
+    
+  
+      .error {
+        position:unset;
+        height: 16px;
+      }
+    }
   }
 }

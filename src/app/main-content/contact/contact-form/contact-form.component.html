@@ -51,6 +51,8 @@
                     <br>
                     @if (!privacy.valid && formSubmitted) {
                     <span class="error">{{'contact.contact-form.privacy-error' | translate}}</span>
+                    } @else {
+                        <span class="error"></span>
                     }
                 </p>
             </div>

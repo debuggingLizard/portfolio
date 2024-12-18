@@ -115,4 +115,51 @@ section {
     }
 }
 
+.arrow-up-responsive {
+    display: none;
+}
 
+@media (max-width: 800px) {
+    .wrapper {
+    
+        >div:first-of-type {
+            justify-content: center;
+   
+            img {
+                display: none;
+            }
+        }
+
+    }
+
+
+    .details {
+        >p {
+            width: 100%;
+            text-align: center;
+        }
+        >div {
+            display: none;
+        }
+    }
+
+    .arrow-up-responsive {
+        display: flex;
+        justify-content: flex-end;
+    
+        svg {
+            transform: rotate(180deg);
+            cursor: pointer;
+            padding: 8px;
+            border: 1px solid transparent;
+    
+            &:hover {
+                border: 1px solid $turquoise;
+            
+                path {
+                    fill: $turquoise;
+                }
+              }
+        }
+    }
+}
