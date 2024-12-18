@@ -120,4 +120,12 @@ h3 {
   h3 {
     font-size: 32px;
   }
+
+  * {
+    .legal {
+      h3 {
+       text-align: left;
+      }
+    }
+  }
 }

@@ -32,3 +32,17 @@ h3 {
     margin-top: 8px;
     color: $turquoise;
 }
+
+.top-law {
+    padding-bottom: 8px;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 128px 20px 48px;
+    }
+
+    .top-law {
+        text-align: left;
+    }
+}
