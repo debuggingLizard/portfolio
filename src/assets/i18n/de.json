@@ -31,7 +31,8 @@
     "challenge-text": "Ich bin immer bereit, neue Technologien zu erlernen, sagen Sie mir einfach, was Sie brauchen!"
   },
   "references": {
-    "title": "Teamplayer gesucht? Das sagen meine Kolleg:innen über mich",
+    "title": "Teamplayer gesucht?",
+    "subtitle": "Das sagen meine Kolleg:innen über mich",
     "render": [
         {
             "project-name": "Projekt Sharkie",

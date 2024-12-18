@@ -13,6 +13,12 @@ section {
   width: 100%;
   max-width: 1440px;
 
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+  }
+
   h4 {
     color: $red;
     font-size: 24px;
@@ -30,6 +36,10 @@ section {
   }
 }
 
+.responsive-subtitle {
+  display: none;
+}
+
 .reference {
   display: flex;
   flex-direction: column;
@@ -43,5 +53,65 @@ section {
 
   > p {
     padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    h4 {
+      text-align: center;
+    }
+
+    img {
+      display: none;
+    }
+
+    .references-container {
+      overflow-x: auto;
+      padding-bottom: 8px;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: $red;
+        cursor: pointer;
+      }
+    }
+  }
+  
+  .responsive-title {
+    display: none;
+  }
+
+  .responsive-subtitle {
+    display: flex;
+    font-size: 16px;
+    color: $red;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .reference {
+    box-sizing: border-box;
+    border: 1px solid $turquoise;
+    min-width: 260px;
+    padding: 12px;
+    p {
+      text-align: center;
+    }
+
+    >p {
+      padding-bottom: 0;
+    }
   }
 }
