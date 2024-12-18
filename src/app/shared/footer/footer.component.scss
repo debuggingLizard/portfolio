@@ -33,6 +33,10 @@ section {
     span {
       font-size: 12px;
     }
+
+    .logo-text-responsive {
+      display: none;
+    }
   }
 
   .socials {
@@ -77,6 +81,43 @@ section {
             font-weight: 400;
             text-decoration: underline;
         }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .wrapper {
+    gap: 32px;
+  }
+
+  .top {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 80px;
+
+    .logo {
+      .logo-text {
+        display: none;
+      }
+
+      .logo-text-responsive {
+        display: flex;
+      }
+    }
+  }
+
+  .bottom {
+    p {
+      display: none;
+    }
+
+    div {
+      flex-direction: column;
+      gap: 8px;
+
+      a {
+        text-align: center;
+      }
     }
   }
 }
