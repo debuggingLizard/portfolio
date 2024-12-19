@@ -23,7 +23,7 @@ export class ContactFormComponent {
     window.open(baseUrl, '_blank', 'noopener noreferrer');
   }
 
-  mailTest: boolean = true;
+  mailTest: boolean = false;
   http = inject(HttpClient);
 
   contactData: {
