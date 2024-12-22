@@ -16,6 +16,12 @@ export class NavbarComponent {
 
   menuToggle:string = "";
 
+  closeResponsiveMenu() {
+    if (window.innerWidth <= 800) {
+      this.menuToggle = "";
+    }
+  }
+
   toggleMenu() { 
     this.menuToggle = this.menuToggle == "" ? "open" : "";
   }

@@ -6,10 +6,10 @@
 
         <div class="links" [ngClass]="{'show': menuToggle == 'open', 'hide' : menuToggle == ''}">
             <div class="nav-links">
-                <a [routerLink]="['/']" fragment="about">{{'navbar.about' | translate}}</a>
-                <a [routerLink]="['/']" fragment="skills">{{'navbar.skills' | translate}}</a>
-                <a [routerLink]="['/']" fragment="projects">{{'navbar.projects' | translate}}</a>
-                <a [routerLink]="['/']" fragment="contact">{{'navbar.contact' | translate}}</a>
+                <a [routerLink]="['/']" fragment="about" (click)="closeResponsiveMenu()">{{'navbar.about' | translate}}</a>
+                <a [routerLink]="['/']" fragment="skills" (click)="closeResponsiveMenu()">{{'navbar.skills' | translate}}</a>
+                <a [routerLink]="['/']" fragment="projects" (click)="closeResponsiveMenu()">{{'navbar.projects' | translate}}</a>
+                <a [routerLink]="['/']" fragment="contact" (click)="closeResponsiveMenu()">{{'navbar.contact' | translate}}</a>
             </div>
 
             <div class="lang-switch">
