@@ -13,9 +13,9 @@
             </div>
 
             <div class="lang-switch">
-                <button (click)="translate.switchLanguage('de')">DE</button>
+                <button (click)="translate.switchLanguage('de'); closeResponsiveMenu()">DE</button>
                 <span>|</span>
-                <button (click)="translate.switchLanguage('en')">EN</button>
+                <button (click)="translate.switchLanguage('en'); closeResponsiveMenu()">EN</button>
             </div>
         </div>
 
