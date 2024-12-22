@@ -1,15 +1,15 @@
 <nav>
     <div class="wrapper">
-        <a href="#home">
+        <a [routerLink]="['/']" fragment="home">
             <img src="./assets/img/logo.png" alt="Logo">
         </a>
 
         <div class="links" [ngClass]="{'show': menuToggle == 'open', 'hide' : menuToggle == ''}">
             <div class="nav-links">
-                <a href="#about">{{'navbar.about' | translate}}</a>
-                <a href="#skills">{{'navbar.skills' | translate}}</a>
-                <a href="#projects">{{'navbar.projects' | translate}}</a>
-                <a href="#contact">{{'navbar.contact' | translate}}</a>
+                <a [routerLink]="['/']" fragment="about">{{'navbar.about' | translate}}</a>
+                <a [routerLink]="['/']" fragment="skills">{{'navbar.skills' | translate}}</a>
+                <a [routerLink]="['/']" fragment="projects">{{'navbar.projects' | translate}}</a>
+                <a [routerLink]="['/']" fragment="contact">{{'navbar.contact' | translate}}</a>
             </div>
 
             <div class="lang-switch">
