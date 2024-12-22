@@ -27,7 +27,7 @@ export class AppComponent {
               element.scrollIntoView({ behavior: 'smooth' });
             }
           }
-        }, 50);
+        }, 100);
       });
   }
 }
