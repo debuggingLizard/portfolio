@@ -19,13 +19,15 @@ export class AppComponent {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe(() => {
-        const fragment = window.location.hash.slice(1);
-        if (fragment) {
-          const element = document.getElementById(fragment);
-          if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+        setTimeout(() => {
+          const fragment = window.location.hash.slice(1);
+          if (fragment) {
+            const element = document.getElementById(fragment);
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }
-        }
+        }, 50);
       });
   }
 }
