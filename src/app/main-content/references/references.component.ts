@@ -18,19 +18,19 @@ export class ReferencesComponent {
     text: string;
   }[] = [
     {
-      name: 'Noah Mueller',
+      name: 'David Werner',
       project: 'Project Sharkie',
-      text: '‘’Marcus had to develop, format and deliver content in collaboration with the team members.He is a reliable and friendly person.’’',
+      text: '‘’Working with Lisa was fantastic. She has a highly organised approach, is helpful, friendly and very committed. I would work with her again and again!’’',
     },
     {
-      name: 'Evelyn Marx',
+      name: 'Meriem Weigert',
       project: 'Project Pollo Loco',
-      text: '‘’ He is a trustworthy teamplayer and can cope with the stress of deadlines. Structured work and clear code. ‘’',
+      text: '‘’I really enjoyed working with Lisa. Her helpfulness and perseverance had a positive influence on the project. I really appreciated her friendly and understanding manner. She always kept an overview so that the project could be completed successfully.‘’',
     },
     {
-      name: 'James Rugman',
+      name: 'Tümay Batman',
       project: 'Project Join',
-      text: '‘’ He is a reliable and friendly person. Work in a structured way and write a clear code. I recommend him as a colleague.’’',
+      text: '‘’Lisa was an incredible support for our Join project. With her commitment, expertise and helpfulness, she made a significant contribution to its success. Whether it was about creative solutions, supporting the team or solving complex tasks - she was always reliable and motivated.’’',
     },
   ];
 }

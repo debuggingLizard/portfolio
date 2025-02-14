@@ -35,16 +35,16 @@
     "subtitle": "Das sagen meine Kolleg:innen über mich",
     "render": [
         {
-            "project-name": "Projekt Sharkie",
-            "text": "‘’Marcus musste in Zusammenarbeit mit den Teammitgliedern Inhalte entwickeln, formatieren und liefern und ist ein zuverlässiger und freundlicher Mensch.’’"
-        },
-        {
-            "project-name": "Projekt Pollo Loco",
-            "text": "‘’Er ist ein vertrauenswürdiger Teamplayer und kann mit dem Stress von Deadlines umgehen. Strukturiertes Arbeiten und klarer Code.‘’"
+            "project-name": "Projekt Kochwelt",
+            "text": "‘’Die Zusammenarbeit mit Lisa war optimal. Sie hat eine super organisierte Vorgehensweise, ist hilfsbereit, freundlich und sehr engagiert. Ich würde immer wieder mit ihr zusammenarbeiten!’’"
         },
         {
             "project-name": "Projekt Join",
-            "text": "‘’Er ist ein zuverlässiger und freundlicher Mensch. Arbeitet strukturiert und schreibt einen klaren Code. Ich empfehle ihn als Kollegen.’’"
+            "text": "‘’Ich habe sehr gerne mit Lisa zusammengearbeitet. Ihre Hilfsbereitschaft und Ausdauer haben das Projekt positiv beeinflusst. Ihre sympathische und verständnisvolle Art habe ich sehr geschätzt. Sie hat immer den Überblick behalten hat, so dass das Projekt erfolgreich abgeschlossen werden konnte.‘’"
+        },
+        {
+            "project-name": "Projekt Join",
+            "text": "‘’Lisa war eine unglaubliche Unterstützung für unser Projekt Join. Sie hat mit ihrem Engagement, ihrem Fachwissen und ihrer Hilfsbereitschaft wesentlich zum Erfolg beigetragen. Egal ob es um kreative Lösungen, die Unterstützung des Teams oder die Umsetzung komplexer Aufgaben ging – sie war immer zuverlässig und motiviert’’"
         }
     ]
   },

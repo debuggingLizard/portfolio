@@ -56,6 +56,14 @@ section {
   }
 }
 
+@media (max-width: 900px) {
+  .wrapper {
+    .references-container {
+      gap: 24px;
+    }
+  }
+}
+
 @media (max-width: 800px) {
   .wrapper {
     h4 {
