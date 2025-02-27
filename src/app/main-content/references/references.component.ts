@@ -23,9 +23,9 @@ export class ReferencesComponent {
       text: '‘’Working with Lisa was fantastic. She has a highly organised approach, is helpful, friendly and very committed. I would work with her again and again!’’',
     },
     {
-      name: 'Meriem Weigert',
+      name: 'Maedeh Khonsari',
       project: 'Project Pollo Loco',
-      text: '‘’I really enjoyed working with Lisa. Her helpfulness and perseverance had a positive influence on the project. I really appreciated her friendly and understanding manner. She always kept an overview so that the project could be completed successfully.‘’',
+      text: '‘’I had the pleasure of working with Lisa in a team during our training programme. She was always committed, reliable and carried out her tasks with great care and responsibility. Her proactive way of working and her ability to remain structured even in challenging situations greatly enriched our team. I can absolutely recommend Lisa as a competent and motivated team player.‘’',
     },
     {
       name: 'Tümay Batman',
