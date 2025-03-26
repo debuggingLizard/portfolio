@@ -23,6 +23,9 @@ header {
   h1 {
     font-weight: 500;
     font-size: 54px;
+    hyphens:manual;
+    // word-break: break-word;
+    // overflow-wrap: break-word;
   }
 
   h2 {
