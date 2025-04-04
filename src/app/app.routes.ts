@@ -4,7 +4,7 @@ import { LegalNoticeComponent } from './legal/legal-notice/legal-notice.componen
 import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
-    {path: '', component: MainContentComponent, title: "Portfolio"},
-    {path: 'legal', component: LegalNoticeComponent, title: "Legal Notice - Portfolio"},
-    {path: 'privacy', component: PrivacyPolicyComponent, title: "Privacy Policy - Portfolio"}
+    {path: '', component: MainContentComponent, title: "Lisa-Marie Maliga"},
+    {path: 'legal', component: LegalNoticeComponent, title: "Legal Notice | Lisa-Marie Maliga"},
+    {path: 'privacy', component: PrivacyPolicyComponent, title: "Privacy Policy | Lisa-Marie Maliga"}
 ];
